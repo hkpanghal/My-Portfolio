@@ -13,21 +13,21 @@ box-sizing: border-box;
     width: 100%;
 }
 
-#page1{
-    height:100vh;
-    width: 100%;
-    background-color: #000;
-}
-#page1 #navbar{
+ #navbar{
     height: 60px;
     width: 100%;
     border: 1px solid red;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: #000;
+    position: sticky;
+    top: 0;
+    
 }
 
-#page1 #navbar #left{
+
+#navbar #left{
     border: 1px solid yellow;
     display: flex;
     justify-content: space-around;
@@ -36,48 +36,146 @@ box-sizing: border-box;
     align-items: center;
     padding: 0 1vw;
 }
-#page1 #navbar #left img{
+#navbar #left img{
     height: 50px;
 }
 
-#page1 #navbar #left #imgProfile{
+#navbar #left #imgProfile{
     border-radius: 50%;
 }
-#page1 #navbar #right{
+#navbar #right{
     border: 1px solid green;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     gap: 2.5vw;
     padding: 1vw ;
-    margin-right: 5vw;
+    margin-right: 3vw;
     
 }
 
-#page1 #navbar #right a{
-    border: 1px solid yellow;
+#navbar #right a{
     text-decoration: none;
+    padding: 3px ;
     color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-#page1 #navbar #right #iconhamburger{
+
+ #navbar #right #iconhamburger{
    color: #fff;
    display: none;
 }
 
+#navbar #right a:hover{
+   
+    box-shadow: 0 0 8px 2px rgba(245, 245, 247, 0.5);
+    scale: 1.2;
+}
+.page1{
+    height:calc(100vh - 60px);
+    width: 100%;
+    background-color: #000;
+    display: flex;
+}
+.page1 #left{
+    width: 50%;
+    height: 100%;
+ 
+    display: flex;
+    align-items: center;
+}
+.page1 #right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.page1 #right #picture{
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    background: linear-gradient(45deg,#0ce39a,#69007f,#fc0987);
+    padding: 5px;
+    transition: all ease 0.5s;
+}
+.page1 #right img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: transparent;
+}
+
+
+.page1 #right #picture:hover{
+    box-shadow: 0 0 50px 50px rgba(245, 245, 247, 0.5);
+    cursor: pointer;
+    scale: 1.1;
+    
+}
+
+.page1 #left #intro{
+    border: 1px solid red;
+    margin-left: 3vw;
+}
+
+.page1 #left #intro h2{
+    width: fit-content;
+    font-size: 3vw;
+    color: #fff;
+    transition: all ease 0.5s;
+    border: 1px solid green;
+}
+
+.page1 #left #intro h1{
+    width: fit-content;
+    font-size: 4vw;
+    color: #fff;
+    transition: all ease 0.5s;
+    border: 1px solid green;
+}
+
+.page1 #left #intro p{
+    margin-top: 1vw;
+    color: #fff;
+}
+.page1 #left #intro h1:hover{
+    scale: 1.05;
+    cursor: pointer;
+    text-shadow: 2px 2px 50px white;
+}
+.page1 #left #intro :nth-child(1):hover{
+    scale: 1.05;
+    cursor: pointer;
+}
+
+.page1 #left #intro :nth-child(3):hover{
+    scale: 1.05;
+    cursor: pointer;
+}
 /* for mobile users */
 @media (max-width:600px){
 
-    #page1 #navbar{
+    #navbar{
         height: 60px;
         
     }
-
-    #page1 #navbar #right a{
-        display: none;
-       
+    #navbar #right{
+       position: absolute;
+       right: 0;
+       gap: 5vw;
     }
-    #page1 #navbar #right #iconhamburger{
+    #navbar #right a{
+        display: none;
+      
+    }
+    #navbar #right #iconhamburger{
         color: #fff;
         display:block;
         font-size: 7vw;
+        
      }
 }
