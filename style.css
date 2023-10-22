@@ -60,6 +60,7 @@ box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 50%;
 }
 
  #navbar #right #iconhamburger{
@@ -68,9 +69,9 @@ box-sizing: border-box;
 }
 
 #navbar #right a:hover{
-   
-    box-shadow: 0 0 8px 2px rgba(245, 245, 247, 0.5);
+    box-shadow: 0 0 8px 2px white;
     scale: 1.2;
+
 }
 .page1{
     height:calc(100vh - 60px);
@@ -81,9 +82,9 @@ box-sizing: border-box;
 .page1 #left{
     width: 50%;
     height: 100%;
- 
     display: flex;
-    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 .page1 #right{
     width: 50%;
@@ -111,7 +112,7 @@ box-sizing: border-box;
 
 
 .page1 #right #picture:hover{
-    box-shadow: 0 0 50px 50px rgba(245, 245, 247, 0.5);
+    box-shadow: 0 0 50px 20px rgba(245, 245, 247, 0.5);
     cursor: pointer;
     scale: 1.1;
     
@@ -141,7 +142,9 @@ box-sizing: border-box;
 .page1 #left #intro p{
     margin-top: 1vw;
     color: #fff;
+    font-size: 1.5vw;
 }
+
 .page1 #left #intro h1:hover{
     scale: 1.05;
     cursor: pointer;
@@ -155,6 +158,32 @@ box-sizing: border-box;
 .page1 #left #intro :nth-child(3):hover{
     scale: 1.05;
     cursor: pointer;
+}
+.page1 #left #connect{
+    margin-left: 3vw;
+    margin-top: 2vw;
+    display: flex;
+    gap: 1vw;
+    border: 1px solid blue;
+}
+
+.page1 #left #connect a{
+    border-radius: 50%;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.page1 #left #connect a img{
+    height: 5vw;
+    width: 5vw;
+    border-radius: 50%;
+    
+}
+
+.page1 #left #connect a:hover {
+    scale: 1.1;
+    box-shadow: 0 0 8px 2px white;
 }
 /* for mobile users */
 @media (max-width:600px){
@@ -178,4 +207,56 @@ box-sizing: border-box;
         font-size: 7vw;
         
      }
+     .page1{
+        flex-direction: column-reverse;
+     }
+     .page1 #right{
+        height: 40%;
+        width: 100%;
+
+        border: 2px solid green;
+        margin-top: 0;
+     }
+
+     .page1 #left{
+        height: 60%;
+        width: 100%;
+        flex-direction: column-reverse;
+        border: 1px solid red;
+        align-items: center;
+        justify-content: flex-end;
+     }
+     .page1 #right #picture{
+        width: 60vw;
+        height: 60vw;
+        margin-top: 10vw;
+     }
+
+     .page1 #left #intro{
+       padding-left: 3vw;
+       margin-left: 0;
+      
+     }
+     .page1 #left #intro h2{
+        font-size: 5.5vw;
+    }
+    
+    .page1 #left #intro h1{
+        font-size: 7.5vw;
+    }
+    .page1 #left #intro p{
+        font-size: 3vw;
+    }
+    .page1 #left #connect {
+        margin-top: 0;
+        margin-bottom: 3vw;
+        gap: 3vw;
+    }
+    .page1 #left #connect a img{
+        height: 15vw;
+        width: 15vw;
+        border: 1px solid wheat;
+        border-radius: 50%;
+        
+    }
 }

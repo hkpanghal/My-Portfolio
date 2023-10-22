@@ -3,6 +3,13 @@ let navbarLeftPart = document.getElementById("left")
 let navbarRightPart = document.getElementById("right")
 let navbarAnchors = document.querySelectorAll(".nav")
 
+let anchors = document.getElementsByTagName("a")
+
+let clicksound = new Audio()
+clicksound.src = "assets/clicksound.wav"
+
+let popsound = new Audio()
+popsound.src = "assets/popsound.wav"
 
 itemHanburgerIcon.addEventListener("click",function(){
   
@@ -24,3 +31,16 @@ itemHanburgerIcon.addEventListener("click",function(){
         }
     }
 })
+
+for(let i=0;i<anchors.length;i++)
+{
+    anchors[i].addEventListener("click",function(){
+        clicksound.play()
+    })
+
+    anchors[i].addEventListener("mouseover",function(){
+        popsound.play()
+    })
+   
+}
+
