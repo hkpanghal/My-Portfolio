@@ -7,14 +7,13 @@ box-sizing: border-box;
  html,body {
     font-family: 'Alumni Sans Collegiate One', sans-serif;
     font-family: 'Trispace', sans-serif;
-  height: 100%;
-  width: 100%;
-  background-image: url("assets/imgb2.jpg");
-  object-fit: cover;
-}
-
+    height: 100%;
+    width: 100%;
+    background-image: url("assets/imgb4.svg");
+ }
 #main{
     width: 100%;
+    
 }
 
  #navbar{
@@ -24,7 +23,6 @@ box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #000;
     position: sticky;
     top: 0;
     
@@ -95,7 +93,7 @@ box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+   
 }
 
 .page1 #right #picture{
@@ -204,10 +202,11 @@ box-sizing: border-box;
     #navbar #right{
        position: absolute;
        right: 0;
-       gap: 5vw;
+       gap: 4vw;
     }
     #navbar #right a{
-        display: none;
+        font-size: 3vw;
+        gap: 0.5vw; display: none;
       
     }
     #navbar #right #iconhamburger{
