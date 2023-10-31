@@ -8,30 +8,32 @@ t.from("#navbar #left",{
 
 gsap.from(".page1 #right",{
    opacity:0,
-   scale:0,
+   scale:0.5,
    delay:1,
-   duration:3,
+   duration:1,
    rotate:45
  })
 
 gsap.from("#intro",{
    opacity:0,
-   scale:0,
+   scale:0.5,
    delay:1,
-   duration:3,
+   duration:1,
    rotate:45
 })
  
 gsap.from(".page1 a",{
    opacity:0,
-   stagger:0.5,
-   delay:1
+   stagger:0.25,
+   delay:1,
+   x:50
 })
 
 gsap.from("#navbar a",{
     opacity:0,
-    stagger:0.25,
-    delay:1
+    stagger:0.2,
+    delay:1,
+    y:100
  })
 
 
