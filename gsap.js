@@ -6,12 +6,11 @@ t.from("#navbar #left",{
    duration:2,
 })
 
-gsap.from(".page1 #right",{
+gsap.from(".page1 #right #picture",{
    opacity:0,
    scale:0.5,
    delay:1,
    duration:1,
-   rotate:45
  })
 
 gsap.from("#intro",{
@@ -19,7 +18,7 @@ gsap.from("#intro",{
    scale:0.5,
    delay:1,
    duration:1,
-   rotate:45
+   rotate:30,
 })
  
 gsap.from(".page1 a",{
