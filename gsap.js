@@ -11,14 +11,16 @@ gsap.from(".page1 #right #picture",{
    scale:0.5,
    delay:1,
    duration:1,
+
  })
 
-gsap.from("#intro",{
+gsap.from(".page1 #left #intro",{
    opacity:0,
-   scale:0.5,
+   scale:0,
    delay:1,
    duration:1,
-   rotate:30,
+   x:-200,
+   
 })
  
 gsap.from(".page1 a",{
@@ -35,6 +37,37 @@ gsap.from("#navbar a",{
     y:100
  })
 
+ gsap.from(".page2 #hright #content",{
+   opacity:0,
+   scale:0,
+   duration:1,
+   x:200,
+   scrollTrigger:{
+      scroller:"body",
+      // markers:"true",
+      start:"bottom 25%",
+     scrub:2,
+   
+      
+  }
+
+ })
+
+ gsap.from(".page2 #hleft #imgcontainer",{
+   opacity:0,
+   scale:0,
+   duration:1,
+   x:-200,
+   scrollTrigger:{
+      scroller:"body",
+      // markers:"true",
+      start:"bottom 25%",
+     scrub:2,
+   
+      
+  }
+
+ })
 
  
 
