@@ -90,6 +90,7 @@ box-sizing: border-box;
     height:calc(100vh - 60px);
     width: 100%;
     display: flex;
+    
 }
 .page1 #left{
     width: 50%;
@@ -113,6 +114,7 @@ box-sizing: border-box;
     border-radius: 50%;
     padding: 5px;
     position: relative;
+    /* overflow: hidden; */
     /* background: linear-gradient(45deg,#0ce39a,#69007f,#fc0987); */
 }
 .page1 #right img{
@@ -120,6 +122,8 @@ box-sizing: border-box;
     height: 100%;
     border-radius: 50%;
     transition: all ease 0.5s;
+    border: 2px solid aqua;
+    
 }
 
 .page1 #right #picture::before{
@@ -142,6 +146,7 @@ box-sizing: border-box;
 
 .page1 #left #intro{
     margin-left: 3vw;
+    
 }
 
 .page1 #left #intro h2{
@@ -214,12 +219,15 @@ box-sizing: border-box;
     width:100%;
     display: flex; 
     flex-direction: row;
-  
+
 }
 .page2 #hleft{
     width: 50%;
     height: 100%;
-    background-color: gold
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 .page2 #hright{
     width: 50%;
@@ -230,7 +238,6 @@ box-sizing: border-box;
 }
 
 .page2 #hright #content{
-    border: 1px solid greenyellow;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -242,15 +249,13 @@ box-sizing: border-box;
     font-size: 1.5vw;
     color: white;
     padding: 1vw;
-    word-spacing: 0.5vw;
-
+    line-height: 1.5;
 }
 
 .page2 #hright #content p span{
     color: lightseagreen;
     display: inline-block;
     transition: all ease 0.5s;
-    line-height: 2.5vw;
 }
 
 .page2 #hright #content h1{
@@ -272,6 +277,25 @@ box-sizing: border-box;
     text-shadow: 2px 2px 50px white;
 }
 
+.page2 #hleft #imgcontainer{
+    width: 40vw;
+    height: 35vw;
+    border-radius: 30%;
+    box-shadow:2px 3px 10px #ffff;
+    overflow: hidden;
+}
+.page2 #hleft #imgcontainer img{ 
+    width: 100%;
+    height: 100%;
+    border-radius: 30%;
+    transition: all ease 0.5s;
+
+}
+
+.page2 #hleft #imgcontainer img:hover{
+    scale: 1.1;
+    cursor: pointer;
+}
 /* ********************************* for mobile users ********************************************** */
 @media (max-width:600px){
 
@@ -301,6 +325,8 @@ box-sizing: border-box;
         height: 40%;
         width: 100%;
         margin-top: 0;
+        overflow: hidden;
+    
      }
 
      .page1 #left{
@@ -309,6 +335,7 @@ box-sizing: border-box;
         flex-direction: column-reverse;
         align-items: center;
         justify-content: flex-end;
+        overflow: hidden;
      }
      .page1 #right #picture{
         width: 60vw;
@@ -320,11 +347,12 @@ box-sizing: border-box;
        padding-left: 3vw;
        margin-left: 0;
        margin-top: 10vw;
-       
+      
      }
      .page1 #left #intro h2{
         font-size: 5.5vw;
         font-weight: 500;
+        
     }
     
     .page1 #left #intro h1{
@@ -332,12 +360,12 @@ box-sizing: border-box;
         margin-left: 35%;
         margin-top: 3%;
         margin-bottom: 3%;
-        /* color: #1a5678; */
+        
     }
     .page1 #left #intro p{
         font-size: 4vw;
         margin-top: 5vw;
-        font-weight: 200;
+
     }
     .page1 #left #connect {
         gap: 3vw;
@@ -356,13 +384,14 @@ box-sizing: border-box;
     .page2 #hleft{
         width: 100%;
         height: 50%;
+        overflow: hidden;
     }
     .page2 #hright{
         width: 100%;
         height: 50%;
+        overflow: hidden;
     }
     .page2 #hright #content{
-        border: 1px solid greenyellow;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -370,7 +399,7 @@ box-sizing: border-box;
     
     }
     .page2 #hright #content p{
-        font-size: 4vw;
+        font-size: large;
         padding: 0 1vw;
     }
     
@@ -379,7 +408,12 @@ box-sizing: border-box;
     }
     
     .page2 #hright #content h1{
-        font-size: 8vw;
+        font-size: xx-large;
         margin-bottom: 3vw;
+    }
+
+    .page2 #hleft #imgcontainer{
+        width: 90%;
+        height: 90%;
     }
 }
