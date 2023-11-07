@@ -43,9 +43,9 @@ gsap.from("#navbar a",{
    duration:1,
    x:200,
    scrollTrigger:{
-      scroller:"body",
+      scroller:"#main",
       // markers:"true",
-      start:"bottom 25%",
+      start:"bottom 35%",
      scrub:2,
    
       
@@ -59,9 +59,9 @@ gsap.from("#navbar a",{
    duration:1,
    x:-200,
    scrollTrigger:{
-      scroller:"body",
+      scroller:"#main",
       // markers:"true",
-      start:"bottom 25%",
+      start:"bottom 35%",
      scrub:2,
    
       

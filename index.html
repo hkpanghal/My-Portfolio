@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One:ital@1&family=Trispace&display=swap" rel="stylesheet">
@@ -15,7 +16,7 @@
     <!-- <audio id="clicksound" src="assets/clicksound.wav"></audio>
     <audio id="popsound" src="assets/popsound.wav"></audio> -->
 
-    <div id="main">
+    <div id="main" data-scroll-container>
         <div id="navbar">
             <div id="left">
                 <img id="imgProfile" src="assets/imgprofile3.png" alt="">
@@ -31,7 +32,7 @@
             </div>
         </div>
         
-        <div id="home" class="page1">
+        <div id="home" class="page1" data-scroll-section>
             <div id="left">
                 <div id="intro">
                     <h2 class="introh2">Hello It's Me</h2>
@@ -58,7 +59,7 @@
             </div>
         </div>
 
-        <div id="about" class="page2">
+        <div id="about" class="page2" data-scroll-section>
             <div id="hleft">
                 <div id="imgcontainer">
                     <img src="assets/imgpersonal2.png" alt="">
@@ -75,10 +76,13 @@
 
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  
+    <script src="locomotive.js"></script>
     <script src="script.js"></script>
     <script src="gsap.js"></script>
+  
     
 </body>
 </html>
