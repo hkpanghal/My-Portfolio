@@ -291,11 +291,109 @@ box-sizing: border-box;
     border-radius: 30%;
     transition: all ease 0.5s;
 
+
 }
 
 .page2 #hleft #imgcontainer img:hover{
     scale: 1.1;
     cursor: pointer;
+}
+/* *********************************3page2 ********************************************** */
+
+.page3{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.page3 #h1skills{
+    background-color: red;
+    font-size: 3vw;
+    width: fit-content;
+}
+.page3 #scontainer{
+    width: 100%;
+    height: 100%;    
+    display: flex;
+    flex-direction: row;                                           
+}
+.page3 #scontainer #sleft{
+    width: 50%;
+    height:100%;
+    border: 3px solid green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+}
+.page3 #scontainer #sright{
+    width: 50%;
+    height:100%;
+    border: 3px solid rgb(128, 0, 21);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+}
+#scontainer h2{
+    color: white;
+}
+#sright #professional{
+    height: 35vw;
+    width: 35vw;
+    border: 5px solid yellow;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2vw;
+}
+#sleft #technical{
+    height: 35vw;
+    width: 35vw;
+    border: 5px solid yellow;
+}
+#professional .progressbars{
+    width: 50%;
+    border: 1px solid wheat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    gap: 1vw;
+}
+#professional .progressbars h5{
+    border: 1px solid red;
+    color: #fff;
+    font-size: 1vw;
+}
+.progressbars .bars{
+    width: 8vw;
+    height: 8vw;
+    border: 1px solid salmon;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    /* background: conic-gradient(#0cc6e7 3.6deg,rgb(8, 74, 87) 0deg); */
+    background-color: #0ce39a;
+    position: relative;
+
+}
+
+.progressbars .bars::before{
+    content: "";
+    position: absolute;
+    background-color: #8f1313;
+    height: 80%;
+    width: 80%;
+    border-radius: 50%;
+    
+}
+.progressbars .bars .values{
+    position: relative;
 }
 /* ********************************* for mobile users ********************************************** */
 @media (max-width:600px){
@@ -306,11 +404,11 @@ box-sizing: border-box;
     #navbar #right{
        position: absolute;
        right: 0;
-       gap: 4vw;
     }
     #navbar #right a{
-        font-size: 3vw;
-        gap: 0.5vw; display: none;
+        font-size: 2.5vw;
+        gap: 0.5vw; 
+        display: none;
       
     }
     #navbar #right #iconhamburger{
