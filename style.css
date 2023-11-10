@@ -306,6 +306,7 @@ box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 .page3 #h1skills{
     background-color: red;
@@ -316,7 +317,8 @@ box-sizing: border-box;
     width: 100%;
     height: 100%;    
     display: flex;
-    flex-direction: row;                                           
+    flex-direction: row;  
+    /* transform:perspective(1000px) rotateX(-90deg);                                          */
 }
 .page3 #scontainer #sleft{
     width: 50%;
@@ -348,6 +350,7 @@ box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
     padding: 2vw;
+
 }
 #sleft #technical{
     height: 35vw;
@@ -371,14 +374,15 @@ box-sizing: border-box;
 .progressbars .bars{
     width: 8vw;
     height: 8vw;
-    border: 1px solid salmon;
+    border: 1px solid white;
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    /* background: conic-gradient(#0cc6e7 3.6deg,rgb(8, 74, 87) 0deg); */
-    background-color: #0ce39a;
+    box-shadow: 1px 2px 8px black; 
+    background: conic-gradient(#0cc6e7 3.6deg,rgb(8, 74, 87) 0deg);
+    /* background-color: #0ce39a; */
     position: relative;
 
 }
@@ -386,15 +390,104 @@ box-sizing: border-box;
 .progressbars .bars::before{
     content: "";
     position: absolute;
-    background-color: #8f1313;
+    border: 1px solid white;
+    background-color: #000;
+    box-shadow: 1px 2px 8px black;
     height: 80%;
     width: 80%;
     border-radius: 50%;
-    
 }
 .progressbars .bars .values{
     position: relative;
 }
+
+#technical ol{
+    border: 2px solid white;
+    color: #fff;
+    list-style: none;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+   
+  
+}
+
+#technical ol li{
+    border: 1px solid red ;
+    flex-basis: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding-right: 3vw;
+    overflow: hidden;
+}
+
+#technical ol li img,h4{
+    border: 1px solid black;
+}
+#technical ol li h4{
+    width: fit-content;
+    font-size: 1vw;
+}
+#technical ol li img{
+    height: 3vw;
+    width: fit-content;
+}
+#technical ol li .techbars{
+    height: 0.5vw;
+    width: 100%;
+    background-color: #000;
+    border-radius: 10px;
+    position: relative;
+   
+}
+#technical ol li .techbars .progress{
+    z-index: 1;
+    position: absolute;
+    border-radius: 10px;  
+    background-color: #0cc6e7;
+}
+#technical ol li .techbars .progress #message{
+    position: absolute;
+    bottom: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: -8%;
+}
+#technical ol li .techbars #pervalue{
+    position: absolute;
+    font-size: 0.8vw;
+}
+
+#technical ol li .techbars #htmlprogress{
+    height: 100%;
+    width: 90%;
+
+}
+#technical ol li .techbars #cssprogress{
+    height: 100%;
+    width: 85%;
+
+}
+#technical ol li .techbars #jsprogress{
+    height: 100%;
+    width: 80%;
+
+}
+
+#technical ol li .techbars #kotlinprogress{
+    height: 100%;
+    width: 85%;
+
+}
+#technical ol li .techbars #xmlprogress{
+    height: 100%;
+    width: 75%;
+
+}
+
 /* ********************************* for mobile users ********************************************** */
 @media (max-width:600px){
 
@@ -515,4 +608,44 @@ box-sizing: border-box;
         width: 90%;
         height: 90%;
     }
+/* ******************************************************************page3******************************************************************* */
+    .page3 #scontainer{
+        flex-direction: column;  
+                                    
+    }
+    .page3 #scontainer #sleft{
+        width: 100%;
+        height:50%;
+    }
+    .page3 #scontainer #sright{
+        width: 100%;
+        height:50%;
+       
+    }
+    #scontainer h2{
+        color: white;
+    }
+    #sright #professional{
+        height: 80vw;
+        width: 90vw;
+        border: 5px solid yellow;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 2vw;
+    
+    }
+    #sleft #technical{
+        height: 80vw;
+        width: 90vw;
+    }
+
+    #professional .progressbars h5{
+        font-size: 3vw;
+    }
+    .progressbars .bars{
+        width: 20vw;
+        height: 20vw;
+    
+    }
+    
 }

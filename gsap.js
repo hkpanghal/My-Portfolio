@@ -1,19 +1,19 @@
 
 function creativitybar(){
    let circularProgress = document.getElementById("creativitybar"),
-   progressValue = document.getElementById("value1");
+   progressValue1 = document.getElementById("value1");
 
-   let progressStartValue = 0,    
-   progressEndValue = 90,    
+   let progressStartValue1 = 0,    
+   progressEndValue1 = 90,    
    speed = 30;
 
    let progress = setInterval(() => {
-   progressStartValue++;
+   progressStartValue1++;
 
-   progressValue.textContent = `${progressStartValue}%`
-   circularProgress.style.background = `conic-gradient(#0cc6e7 ${progressStartValue * 3.6}deg,rgb(8, 74, 87) 0deg)`
+   progressValue1.textContent = `${progressStartValue1}%`
+   circularProgress.style.background = `conic-gradient(#0cc6e7 ${progressStartValue1 * 3.6}deg,rgb(8, 74, 87) 0deg)`
 
-   if(progressStartValue == progressEndValue){
+   if(progressStartValue1 == progressEndValue1){
       clearInterval(progress);
    }    
    }, speed);
@@ -23,7 +23,7 @@ function communicationbar(){
    progressValue = document.getElementById("value2");
 
    let progressStartValue = 0,    
-   progressEndValue = 90,    
+   progressEndValue = 85,    
    speed = 30;
 
    let progress = setInterval(() => {
@@ -42,7 +42,7 @@ function problemsolvingbar(){
    progressValue = document.getElementById("value3");
 
    let progressStartValue = 0,    
-   progressEndValue = 90,    
+   progressEndValue = 96,    
    speed = 30;
 
    let progress = setInterval(() => {
@@ -58,10 +58,10 @@ function problemsolvingbar(){
 }
 function teamworkbar(){
    let circularProgress = document.getElementById("teamworkbar"),
-   progressValue = document.getElementById("value3");
+   progressValue = document.getElementById("value4");
 
    let progressStartValue = 0,    
-   progressEndValue = 90,    
+   progressEndValue = 94,    
    speed = 30;
 
    let progress = setInterval(() => {
@@ -144,17 +144,45 @@ gsap.from("#navbar a",{
   }
 
  })
+
+ gsap.from("#professional #creativitybar",{
+   // opacity:0,
+   // scale:0,
+   duration:2,
+  
+   scrollTrigger:{
+      trigger:"#professional",
+      scroller:"#main",
+      // markers:"true",
+      // start:"top 90%",
+     onEnter: () => creativitybar(),    
+  }
+})
+
+gsap.from("#professional #communicationbar",{
+   // opacity:0,
+   // scale:0,
+   duration:2,
+  
+   scrollTrigger:{
+      trigger:"#professional",
+      scroller:"#main",
+      // markers:"true",
+      // start:"top 90%",
+     onEnter: () => communicationbar(),    
+  }
+})
 gsap.from("#professional #problembar",{
    // opacity:0,
    // scale:0,
    duration:2,
   
    scrollTrigger:{
-      trigger:".bars",
+      trigger:"#professional",
       scroller:"#main",
-      markers:"true",
-      start:"top 50%",
-     onEnter: () => creativitybar(),    
+      // markers:"true",
+      // start:"top 90%",
+     onEnter: () => problemsolvingbar(),    
   }
 })
 
@@ -164,10 +192,37 @@ gsap.from("#professional #teamworkbar",{
    duration:2,
   
    scrollTrigger:{
-      trigger:".bars",
+      trigger:"#professional",
       scroller:"#main",
-      markers:"true",
-      start:"top 50%",
+      // markers:"true",
      onEnter: () => teamworkbar(),    
+  }
+})
+
+// gsap.to("#scontainer",{
+//    rotateX:0,
+//    duration:5,
+//    scrollTrigger:{
+//       trigger:"#scontainer",
+//       scroller:"#main",
+//       markers:"true",
+//       start:"top 60%",
+//       end:"bottom 70%",
+//       scrub:5,
+//   }
+// })
+
+gsap.from("#technical .techbars .progress",{
+   // opacity:0,
+   scale:0,
+   x:-500,
+   duration:2,
+   scrollTrigger:{
+      trigger:".techbars",
+      scroller:"#main", 
+      // markers:"true",
+      scrub:5,
+      // start:"top 0%"
+      end:"bottom 100%"
   }
 })
