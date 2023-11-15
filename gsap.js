@@ -216,7 +216,7 @@ gsap.from("#technical .techbars .progress",{
    // opacity:0,
    scale:0,
    x:-500,
-   duration:2,
+   duration:3,
    scrollTrigger:{
       trigger:".techbars",
       scroller:"#main", 
@@ -225,4 +225,33 @@ gsap.from("#technical .techbars .progress",{
       // start:"top 0%"
       end:"bottom 100%"
   }
+
+})
+gsap.from("#professional,#technical",{
+   x:100,
+   duration:1,
+   scale:0,
+   opacity:0,
+   scrollTrigger:{
+      trigger:"#professional,#technical",
+      scroller:"#main",
+      // markers:true,
+      end:"bottom 70%",
+      scrub:5,
+   }
+})
+
+gsap.from(".serv",{
+   x:100,
+   duration:1,
+   scale:0,
+   opacity:0,
+   stagger:0.5,
+   scrollTrigger:{
+      trigger:".serv",
+      scroller:"#main",
+      markers:true,
+      end:"bottom 70%",
+      scrub:5,
+   }
 })

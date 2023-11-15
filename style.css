@@ -327,7 +327,6 @@ box-sizing: border-box;
 .page3 #scontainer #sleft{
     width: 50%;
     height:100%;
-    border: 3px solid green;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -337,7 +336,6 @@ box-sizing: border-box;
 .page3 #scontainer #sright{
     width: 50%;
     height:100%;
-    border: 3px solid rgb(128, 0, 21);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -350,15 +348,18 @@ box-sizing: border-box;
 #sright #professional{
     height: 35vw;
     width: 35vw;
-    border: 1px solid yellow;
     display: flex;
     flex-wrap: wrap;
+    box-shadow: 8px 8px 20px #0cc6e7;
+    border-radius: 10px;
    
 }
 #sleft #technical{
     height: 35vw;
     width:35vw;
-    border: 1px solid yellow;
+    box-shadow: 8px 8px 20px #0cc6e7;
+    border-radius: 10px;
+    padding: 1vw;
 }
 #professional .progressbars{
     width: 50%;
@@ -489,7 +490,92 @@ box-sizing: border-box;
     width: 75%;
 
 }
-
+.page4{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    
+}
+.page4 #boxes{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+}
+.page4 #h1services{
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    color: white;
+    margin-top: 3vw;
+    position: absolute;
+    font-size: 3vw;
+    border-bottom: 1px solid #dadada;
+}
+.page4 .serv{
+    height: 27vw;
+    width: 27vw;
+    /* border: 1px solid white; */
+    padding: 1.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 8px 8px 20px #0cc6e7;
+    border-radius: 10px;
+}
+.page4 .serv:hover{
+    cursor: pointer;
+    scale: 1.05;
+}
+.page4 #boxes ul{
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+.page4 #boxes ul li{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.page4 #boxes ul :nth-child(1){
+    flex-basis: 20%;
+}
+.page4 #boxes ul :nth-child(2){
+    flex-basis: 60%;
+    gap: 1vw;
+}
+.page4 #boxes ul :nth-child(3){
+    flex-basis: 20%;
+}
+.page4 #boxes ul li p{
+    font-size: 1vw;
+    
+}
+.page4 #boxes ul li i{
+    font-size: 3vw;
+    color: #0cc6e7;
+}
+.page4 #boxes ul li h3{
+    font-size: 2vw;
+    font-weight: 100;
+}
+.page4 #boxes ul li a{
+    text-decoration: none;
+    width: fit-content;
+    padding: 1vw;
+    border: 1px solid white;
+    border-radius: 10px;
+    color:#0cc6e7;
+    font-size: 1vw;
+    box-shadow: 3px 3px 10px;
+}
 /* ********************************* for mobile users ********************************************** */
 @media (max-width:600px){
 
