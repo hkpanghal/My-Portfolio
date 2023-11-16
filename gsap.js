@@ -250,7 +250,7 @@ gsap.from(".serv",{
    scrollTrigger:{
       trigger:".serv",
       scroller:"#main",
-      markers:true,
+      // markers:true,
       end:"bottom 70%",
       scrub:5,
    }
