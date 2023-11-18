@@ -147,7 +147,8 @@ box-sizing: border-box;
 
 .page1 #left #intro{
     margin-left: 3vw;
-    
+    /* overflow: hidden; */
+    position: relative;
 }
 
 .page1 #left #intro h2{
@@ -246,10 +247,10 @@ box-sizing: border-box;
 
 }
 .page2 #hright #content p{
-    text-align: center;
+    /* text-align: center; */
     font-size: 1.5vw;
     color: white;
-    padding: 1vw;
+    padding: 2vw;
     line-height: 1.5;
 }
 
@@ -279,19 +280,21 @@ box-sizing: border-box;
 }
 
 .page2 #hleft #imgcontainer{
-    width: 40vw;
-    height: 35vw;
-    border-radius: 30%;
-    box-shadow:2px 3px 10px #ffff;
+    width: 35vw;
+    height: 30vw;
+    border-radius: 5%;
+    border-top: 1px solid #0cc6e7 ;
+    border-left: 1px solid #0cc6e7;
+    box-shadow: 8px 8px 30px #0cc6e7;
     overflow: hidden;
+    
 }
 .page2 #hleft #imgcontainer img{ 
+ 
     width: 100%;
     height: 100%;
-    border-radius: 30%;
     transition: all ease 0.5s;
-
-
+    object-fit:cover;
 }
 
 .page2 #hleft #imgcontainer img:hover{
@@ -424,10 +427,6 @@ box-sizing: border-box;
     overflow: hidden;
 }
 
-
-#technical ol li img,h4{
-    border: 1px solid black;
-}
 #technical ol li h4{
     width: fit-content;
     font-size: 1vw;
@@ -532,24 +531,31 @@ box-sizing: border-box;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
+
 }
 .page4 #ui{
     color:#f50c04 ;
     box-shadow: 8px 8px 30px #f50c04;
     border-top: 1px solid red ;
     border-left: 1px solid red;
+    overflow: hidden;
+    position: relative;
 }
 .page4 #app{
     color:#37f802 ;
     border-top: 1px solid #37f802 ;
     border-left: 1px solid #37f802;
     box-shadow: 8px 8px 30px #37f802;
+    overflow: hidden;
+    position: relative;
 }
 .page4 #web{
     color: #0cc6e7;
     border-top: 1px solid #0cc6e7 ;
     border-left: 1px solid #0cc6e7;
     box-shadow: 8px 8px 30px #0cc6e7;
+    overflow: hidden;
+    position: relative;
 }
 .page4 .serv:hover{
     cursor: pointer;
@@ -597,12 +603,7 @@ box-sizing: border-box;
     font-size: 1vw;
     box-shadow: 3px 3px 10px;
 }
-.page4 #boxes :nth-child(1) :nth-child(3) a{
-    color:#f50c04;
-    border-top: 1px solid red ;
-    border-left: 1px solid red;
 
-}
 .page4 #boxes :nth-child(2) :nth-child(3) a{
     color:#37f802;
     border-top: 1px solid #37f802 ;
@@ -612,6 +613,12 @@ box-sizing: border-box;
     color:#0cc6e7;
     border-top: 1px solid #0cc6e7 ;
     border-left: 1px solid #0cc6e7;
+}
+.page4 #boxes :nth-child(1) :nth-child(3) a{
+    color:#f50c04;
+    border-top: 1px solid red ;
+    border-left: 1px solid red;
+
 }
 .page4 #boxes .serv a:hover{
     scale: 1.1;
@@ -718,10 +725,11 @@ box-sizing: border-box;
         flex-direction: column;
         align-items: center;
         gap: 1vw;
+       
     
     }
     .page2 #hright #content p{
-        font-size: large;
+        font-size:4vw ;
         padding: 0 1vw;
     }
     
@@ -824,6 +832,7 @@ box-sizing: border-box;
         top: 5%;
         font-size: xx-large;
         border-bottom: 1px solid #dadada;
+        width: max-content;
     }
     .page4 .serv{
     
@@ -850,4 +859,33 @@ box-sizing: border-box;
         box-shadow: 3px 3px 5px;
     }
     
+}
+
+.imagediv{
+    width: 30%;
+    height:35%;
+    background-color: #37f802;
+    position: absolute;
+    display: none;
+    /* transition: all ease 0.3s; */
+}
+
+.imagediv img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.popUpDiv{
+    width: 12%;
+    height:35%;
+    position: absolute;
+    overflow: hidden;
+    /* transition: all ease 0.3s; */
+}
+.popUpDiv .popUpImg{
+    /* transform: translateY(100%); */
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }

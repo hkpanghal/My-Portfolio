@@ -32,17 +32,17 @@ itemHanburgerIcon.addEventListener("click",function(){
     }
 })
 
-for(let i=0;i<anchors.length;i++)
-{
-    anchors[i].addEventListener("click",function(){
-        clicksound.play()
-    })
+// for(let i=0;i<anchors.length;i++)
+// {
+//     anchors[i].addEventListener("click",function(){
+//         clicksound.play()
+//     })
 
-    anchors[i].addEventListener("mouseover",function(){
-        popsound.play()
-    })
+//     anchors[i].addEventListener("mouseover",function(){
+//         popsound.play()
+//     })
    
-}
+// }
 
 
 

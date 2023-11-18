@@ -1,10 +1,7 @@
 
-function creativitybar(){
-   let circularProgress = document.getElementById("creativitybar"),
-   progressValue1 = document.getElementById("value1");
-
-   let progressStartValue1 = 0,    
-   progressEndValue1 = 90,    
+function preogressBar(progressStartValue1,progressEndValue1,bar,value){
+   let circularProgress = document.getElementById(bar),
+   progressValue1 = document.getElementById(value);   
    speed = 30;
 
    let progress = setInterval(() => {
@@ -18,63 +15,7 @@ function creativitybar(){
    }    
    }, speed);
 }
-function communicationbar(){
-   let circularProgress = document.getElementById("communicationbar"),
-   progressValue = document.getElementById("value2");
 
-   let progressStartValue = 0,    
-   progressEndValue = 85,    
-   speed = 30;
-
-   let progress = setInterval(() => {
-   progressStartValue++;
-
-   progressValue.textContent = `${progressStartValue}%`
-   circularProgress.style.background = `conic-gradient(#0cc6e7 ${progressStartValue * 3.6}deg,rgb(8, 74, 87) 0deg)`
-
-   if(progressStartValue == progressEndValue){
-      clearInterval(progress);
-   }    
-   }, speed);
-}
-function problemsolvingbar(){
-   let circularProgress = document.getElementById("problembar"),
-   progressValue = document.getElementById("value3");
-
-   let progressStartValue = 0,    
-   progressEndValue = 96,    
-   speed = 30;
-
-   let progress = setInterval(() => {
-   progressStartValue++;
-
-   progressValue.textContent = `${progressStartValue}%`
-   circularProgress.style.background = `conic-gradient(#0cc6e7 ${progressStartValue * 3.6}deg,rgb(8, 74, 87) 0deg)`
-
-   if(progressStartValue == progressEndValue){
-      clearInterval(progress);
-   }    
-   }, speed);
-}
-function teamworkbar(){
-   let circularProgress = document.getElementById("teamworkbar"),
-   progressValue = document.getElementById("value4");
-
-   let progressStartValue = 0,    
-   progressEndValue = 94,    
-   speed = 30;
-
-   let progress = setInterval(() => {
-   progressStartValue++;
-
-   progressValue.textContent = `${progressStartValue}%`
-   circularProgress.style.background = `conic-gradient(#0cc6e7 ${progressStartValue * 3.6}deg,rgb(8, 74, 87) 0deg)`
-
-   if(progressStartValue == progressEndValue){
-      clearInterval(progress);
-   }    
-   }, speed);
-}
 let t = gsap.timeline();
 t.from("#navbar #left",{
     y:-200,
@@ -155,7 +96,7 @@ gsap.from("#navbar a",{
       scroller:"#main",
       // markers:"true",
       // start:"top 90%",
-     onEnter: () => creativitybar(),    
+     onEnter: () => preogressBar(0,90,"creativitybar","value1"),    
   }
 })
 
@@ -169,7 +110,7 @@ gsap.from("#professional #communicationbar",{
       scroller:"#main",
       // markers:"true",
       // start:"top 90%",
-     onEnter: () => communicationbar(),    
+     onEnter: () => preogressBar(0,85,"communicationbar","value2"),    
   }
 })
 gsap.from("#professional #problembar",{
@@ -182,7 +123,7 @@ gsap.from("#professional #problembar",{
       scroller:"#main",
       // markers:"true",
       // start:"top 90%",
-     onEnter: () => problemsolvingbar(),    
+     onEnter: () => preogressBar(0,96,"problembar","value3"),    
   }
 })
 
@@ -195,7 +136,7 @@ gsap.from("#professional #teamworkbar",{
       trigger:"#professional",
       scroller:"#main",
       // markers:"true",
-     onEnter: () => teamworkbar(),    
+     onEnter: () => preogressBar(0,94,"teamworkbar","value4"),    
   }
 })
 
@@ -255,3 +196,104 @@ gsap.from(".serv",{
       scrub:5,
    }
 })
+
+function page1IntroImgEffect()
+{
+
+   // Throttling Function
+   const throttleFunction=(func, delay)=>{
+      let prev = 0; 
+      return (...args) => {
+        let now = new Date().getTime(); 
+        if(now - prev> delay){ 
+          prev = now;
+          return func(...args);  
+        }
+      }
+    }
+
+   let divIntro = document.querySelector("#intro");
+  
+   
+   divIntro.addEventListener("mousemove",throttleFunction(function(details){
+      // console.log("div ban gya");
+      
+      let nayaDiv = document.createElement("div");
+      nayaDiv.classList.add("popUpDiv");
+      divIntro.appendChild(nayaDiv);
+
+      let img = document.createElement("img");
+      img.classList.add("popUpImg");
+      img.setAttribute("src","https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2lybHxlbnwwfHwwfHx8MA%3D%3D")
+
+      nayaDiv.appendChild(img);
+      
+      let xval = gsap.utils.mapRange(divIntro.getBoundingClientRect().left, divIntro.getBoundingClientRect().right,0,80,details.clientX)
+      let yval = gsap.utils.mapRange(divIntro.getBoundingClientRect().top, divIntro.getBoundingClientRect().bottom,0,65,details.clientY)
+      let rx = gsap.utils.mapRange(divIntro.getBoundingClientRect().left, divIntro.getBoundingClientRect().right,-45,45,details.clientX)
+
+
+      // console.log(divIntro.getBoundingClientRect().left, divIntro.getBoundingClientRect().right,xval/50*10)
+      // nayaDiv.style.transform = `translate(${xval}%,${yval}%)`;
+       nayaDiv.style.left = xval + "%";
+       nayaDiv.style.top = yval + "%";
+       
+       gsap.to(".popUpDiv",{
+         y:-70,
+         ease:Power1,
+         duration:0.5,
+         rotate:Math.floor(Math.random())+rx,
+       })
+       
+       gsap.to(".popUpDiv",{
+         y:70,
+         ease:Power1,
+         duration:0.3,
+         delay:0.25,
+         rotate:Math.floor(Math.random())+rx,
+       })
+      
+       setTimeout(function(){
+         nayaDiv.remove();
+       },2000)
+   },500))
+
+}
+
+
+function page4PointerImg(box,source)
+{
+   let ui =  document.querySelector(box);
+   let learnmore =  document.querySelector(`${box} .learnmore`);
+   let div = document.querySelector(`${box} .imagediv`);
+   let img = document.createElement("img")
+   img.setAttribute("src",source)
+   
+   div.appendChild(img);
+   ui.addEventListener("mouseenter",()=>{
+      div.style.display = "block";
+   })
+   ui.addEventListener("mouseleave",()=>{
+      div.style.display = "none";
+   })
+   learnmore.addEventListener("mouseenter",()=>{
+      div.style.display = "none";
+   })
+   learnmore.addEventListener("mouseleave",()=>{
+      div.style.display = "block";
+   })
+   ui.addEventListener("mousemove",function(details){
+      let xval = gsap.utils.mapRange(ui.getBoundingClientRect().left, ui.getBoundingClientRect().right,ui.clientWidth/2-ui.clientWidth,ui.clientWidth-ui.clientWidth/2,details.clientX)
+      let yval = gsap.utils.mapRange(ui.getBoundingClientRect().top, ui.getBoundingClientRect().bottom+learnmore.getBoundingClientRect().top/2,ui.clientHeight/2-ui.clientHeight,ui.clientHeight-ui.clientHeight/2,details.clientY)
+      
+      let rx = gsap.utils.mapRange(ui.getBoundingClientRect().left, ui.getBoundingClientRect().right,45,-45,details.clientX)
+
+      // console.log(xval,yval);
+      div.style.transform = `translate(${xval}%,${yval}%) rotate(${rx}deg)`;
+     
+   })
+}
+page4PointerImg("#ui","assets/uiuximg.jpg")
+page4PointerImg("#app","assets/appimg.jpg")
+page4PointerImg("#web","assets/webimg.jpg")
+page1IntroImgEffect()
