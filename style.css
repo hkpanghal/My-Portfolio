@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
  html,body {
@@ -221,7 +221,6 @@ box-sizing: border-box;
     width:100%;
     display: flex; 
     flex-direction: row;
-
 }
 .page2 #hleft{
     width: 50%;
@@ -499,7 +498,6 @@ box-sizing: border-box;
     height: calc(100vh - 60px);
     width: 100%;
     position: relative;
-    
 }
 .page4 #boxes{
     position: absolute;
@@ -510,6 +508,7 @@ box-sizing: border-box;
     justify-content: center;
     align-items: center;
     gap: 3vw;
+    
 }
 .page4 #h1services{
     top: 0%;
@@ -626,24 +625,22 @@ box-sizing: border-box;
 
 }
 
+        /* ***************************************************************  page5 ************************************************************************ */
 
 .page5{
-    height: calc(100vh - 60px);
+    min-height: calc(100vh - 60px);
     width: 100%;
-    background-color:black;
-    border: 5px solid white;
-    color: white;
+    color: #dadada;
     display: flex;
-
 }
 
 #pleft{
     width: 50%;
     height: 100%;
-    border: 2px solid green;
     display:flex ;
     align-items: center;
     justify-content: center;
+    
 
 }
 #plcontainer{
@@ -653,28 +650,24 @@ box-sizing: border-box;
    flex-direction: column;
    margin-left: 3vw;
    gap: 2vw;
-   background-color: #0cc6e7;
+
    
-}
-#plcontainer #proj1desc{
-    background-color: rebeccapurple;
-    width: 80%;
 }
 #pright{
     width: 50%;
     height: 100%;
-    border: 2px solid green;
 }
 
 #prcontainer{
     margin-top: 5vw;
-    margin-left: 5vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
 }
 #project1{
     display: flex;
     align-items: center;
     gap: 2vw;
-    background-color: #37f802;
+   
 }
 #project1 #proj1img{
     height: 20vw;
@@ -684,17 +677,59 @@ box-sizing: border-box;
    
 }
 #project2{
-    background-image: url("assets/webimg.jpg");
+    display: flex;
+}
+#project2 #img1{
+    /* background-image: url("assets/webimg.jpg"); */
+    height: 20vw;
+    width: 25vw;
     object-fit: cover;
     background-size: cover;
-   
+  
+}
+#project2 #p2right{
+    width: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#project2 #p2right .cool{
+    height: 40%;
+    width: 30%;
+    position: absolute;
+}
+#project2 #p2right .cool4{
+    bottom: 5%;
+    right: 5%;
+}
+#project2 #p2right .cool1{
+    top: 5%;
+    left: 5%;
+
+}
+#project2 #p2right .cool5{
+    top: 5%;
+    right: 5%;
+    height: 30%;
+}
+#project2 #p2right .cool2{
+    bottom: 5%;
+    left: 5%;
+    height: 30%;
+}
+#prcontainer p{
+    margin-top: 2vw;
+    margin-right: 1vw;
 }
 #latestProjects{
     width: fit-content;
     text-align: center;
     font-size: 3vw;
     border-bottom: 1px solid #dadada;
+    color: white;
 }
+
 
 /* ********************************* for mobile users ********************************************** */
 @media (max-width:600px){
@@ -720,6 +755,8 @@ box-sizing: border-box;
      }
      .page1{
         flex-direction: column-reverse;
+        overflow: hidden;
+
      }
      .page1 #right{
         height: 40%;
@@ -780,6 +817,8 @@ box-sizing: border-box;
     /* -----------------------page2-------------------------------  */
     .page2{
         flex-direction: column;
+        overflow: hidden;
+   
     }
     .page2 #hleft{
         width: 100%;
@@ -819,6 +858,9 @@ box-sizing: border-box;
     }
 /* ******************************************************************page3******************************************************************* */
    
+    .page3{
+        overflow: hidden;
+    }
     .page3 #h1skills{
         font-size: xx-large;
     }
@@ -829,6 +871,7 @@ box-sizing: border-box;
     .page3 #scontainer #sleft{
         width: 100%;
         height:50%;
+        
     }
     .page3 #scontainer #sright{
         width: 100%;
@@ -837,9 +880,10 @@ box-sizing: border-box;
     }
     #scontainer h2{
         color: white;
+    
     }
     #sright #professional{
-        height: 75vw;
+        height: 70vw;
         width: 90vw;
         display: flex;
         flex-wrap: wrap;
@@ -847,9 +891,9 @@ box-sizing: border-box;
         
     }
     #sleft #technical{
-        height: 75vw;
+        height: 70vw;
         width: 90vw;
-
+    
     }
 
     #professional .progressbars h5{
@@ -861,7 +905,7 @@ box-sizing: border-box;
     
     }
     
-
+   
     #technical ol li{
         flex-basis: 20%;
         display: flex;
@@ -891,13 +935,22 @@ box-sizing: border-box;
         font-size: 2vw;
     }
 
+    .page3 #sleft{
+        margin-top: 10vw;
+       
+    }
     
     /* ***************************************************************  page4 ************************************************************************ */
-
+   
+    .page4{
+        overflow: hidden;
+    }
     .page4 #boxes{
-        top:55%;
+        height: 100%;
         flex-direction: column;
         gap: 5vw;
+        /* background-color: #000; */
+        margin-top: 10vw;
     }
     .page4 #h1services{
         top: 5%;
@@ -906,8 +959,8 @@ box-sizing: border-box;
         width: max-content;
     }
     .page4 .serv{
-    
-        height: 55vw;
+        
+        height: 50vw;
         width: 85vw;
         padding: 5vw;
     
@@ -929,7 +982,72 @@ box-sizing: border-box;
         font-size: 3vw;
         box-shadow: 3px 3px 5px;
     }
-    
+
+
+        /* ***************************************************************  page5 ************************************************************************ */
+
+        .page5{
+            flex-direction: column;
+            height: calc(100vh - 60px);
+            overflow: hidden;
+        }
+        
+        #pleft{
+            width: 100%;
+            height: 50%;
+        }
+        #plcontainer{
+           /* border: 1px solid white; */
+           margin-left: 3vw;
+           gap: 2vw;
+           font-size: 2.8vw;
+           
+        }
+        #pright{
+            width: 100%;
+            height: 50%;
+
+        }
+        
+        #prcontainer{
+            margin-top: 0vw;
+            margin-left: 2vw;
+            margin-right: 2vw;
+            height: 60%;
+            font-size: 2.8vw;
+        }
+        #project1{
+            gap: 5vw;
+           
+        }
+        #project1 #proj1img{
+            height: 30vw;
+            width: 40vw;
+            object-fit: cover;
+            background-size: cover;
+           
+        }
+        #project2{
+            height: 100%;
+            display: flex;
+
+
+        }
+        #project2 #img1{
+            height: 30vw;
+            width: 50vw;
+            margin-top: 15%;
+        }
+
+        #latestProjects{
+            width: fit-content;
+            text-align: center;
+            font-size: x-large;
+            border-bottom: 1px solid #dadada;
+            color: white;
+        }
+        
+        
 }
 
 .imagediv{
