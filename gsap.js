@@ -54,22 +54,31 @@ gsap.from("#navbar a",{
     y:100
  })
 
- gsap.from(".page2 #hright #content",{
-   opacity:0,
-   scale:0,
-   duration:1,
-   x:200,
+ gsap.from(".page2 #hright #content p",{
+   x:900,
+   duration:1.5,
+   ease:Power2,
    scrollTrigger:{
       scroller:"#main",
       // markers:"true",
       start:"bottom 35%",
      scrub:2,
-   
-      
-  }
+    }
 
  })
 
+ gsap.from(".page2 #hright #content h1",{
+   y:-100,
+   duration:0.5,
+   ease:Power2,
+   scrollTrigger:{
+      scroller:"#main",
+      // markers:"true",
+      start:"bottom 70%",
+     scrub:2,
+    }
+
+ })
  gsap.from(".page2 #hleft #imgcontainer",{
    opacity:0,
    scale:0,
@@ -139,6 +148,17 @@ gsap.from("#professional #teamworkbar",{
      onEnter: () => preogressBar(0,94,"teamworkbar","value4"),    
   }
 })
+gsap.from("#h1skills",{
+   opacity:0,
+   duration:1,
+   ease:Power2,
+   scrollTrigger:{
+      trigger:"#h1skills",
+      scroller:"#main",
+      scrub:3,
+      end:"top 70%",
+   }
+})
 
 // gsap.to("#scontainer",{
 //    rotateX:0,
@@ -182,6 +202,17 @@ gsap.from("#professional,#technical",{
    }
 })
 
+gsap.from("#h1services",{
+   opacity:0,
+   duration:1,
+   ease:Power2,
+   scrollTrigger:{
+      trigger:"#h1services",
+      scroller:"#main",
+      scrub:3,
+      end:"top 70%",
+   }
+})
 gsap.from(".serv",{
    x:100,
    duration:1,
@@ -196,6 +227,43 @@ gsap.from(".serv",{
       scrub:5,
    }
 })
+
+
+gsap.from("#pleft #plcontainer #latestProjects",{
+   x:-100,
+   duration:0.5,
+   opacity:0,
+   scrollTrigger:{
+      trigger:"#latestProjects",
+      scroller:"#main",
+      end:"top 30%",
+      scrub:3,
+   }
+})
+gsap.from("#plcontainer p,#prcontainer p,#project1right ul,#project1right #techStack",{
+   y:100,
+   duration:0.5,
+   stagger:0.25,
+   ease:Power2,
+   scrollTrigger:{
+      trigger:"#plcontainer p,#prcontainer p,#project1right ul,#project1right #techStack",
+      scroller:"#main",
+      end:"top 70%",
+      scrub:1,
+   }
+})
+
+// gsap.from(".page5 img",{
+//    opacity:0,
+//    duration:1,
+//    stagger:0.2,
+//    ease:Power2,
+//    scrollTrigger:{
+//       trigger:".page5 img",
+//       scroller:"#main",
+//    }
+// })
+
 
 function page1IntroImgEffect()
 {
