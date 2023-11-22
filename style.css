@@ -149,6 +149,7 @@
     margin-left: 3vw;
     /* overflow: hidden; */
     position: relative;
+    overflow: hidden;
 }
 
 .page1 #left #intro h2{
@@ -156,39 +157,39 @@
     font-size: 3vw;
     font-weight: 100;
     color: #fff;
-    transition: all ease 0.5s;
-    
+    overflow: hidden;
 }
 
 .page1 #left #intro h1{
     width: fit-content;
     font-size: 4vw;
     color:lightseagreen;
-    transition: all ease 0.5s;
+    overflow: hidden;
 }
 
 .page1 #left #intro p{
     margin-top: 1vw;
     color: #fff;
     font-size: 1vw;
+    overflow: hidden;
 }
 
-.page1 #left #intro h1:hover{
+/* .page1 #left #intro h1:hover{
     scale: 1.05;
     cursor: pointer;
     text-shadow: 2px 2px 50px white;
-}
-.page1 #left #intro :nth-child(1):hover{
+} */
+/* .page1 #left #intro :nth-child(1):hover{
     scale: 1.05;
     cursor: pointer;
-}
+} */
 
 
 
-.page1 #left #intro :nth-child(3):hover{
+/* .page1 #left #intro :nth-child(3):hover{
     scale: 1.05;
     cursor: pointer;
-}
+} */
 .page1 #left #connect{
     margin-left: 3vw;
     margin-top: 2vw;
@@ -358,7 +359,6 @@
     border-left: 1px solid red;
     border-top: 1px solid red;
     border-radius: 10px;
-   
 }
 #sleft #technical{
     height: 35vw;

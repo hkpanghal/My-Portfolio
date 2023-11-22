@@ -31,12 +31,10 @@ gsap.from(".page1 #right #picture",{
 
  })
 
-gsap.from(".page1 #left #intro",{
-   opacity:0,
-   scale:0,
-   delay:1,
+gsap.from(".page1 #left #intro .p1text",{
    duration:1,
-   x:-200,
+   y:100,
+   stagger:0.25,
    
 })
  
@@ -69,13 +67,13 @@ gsap.from("#navbar a",{
 
  gsap.from(".page2 #hright #content h1",{
    y:-100,
-   duration:0.5,
-   ease:Power2,
+   duration:0.01,
+   // ease:Power2,
    scrollTrigger:{
       scroller:"#main",
       // markers:"true",
       start:"bottom 70%",
-     scrub:2,
+     scrub:5,
     }
 
  })
