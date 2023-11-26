@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,8 +17,9 @@
     <!-- <audio id="clicksound" src="assets/clicksound.wav"></audio>
     <audio id="popsound" src="assets/popsound.wav"></audio> -->
 
+    <div class="cursor"></div>
     <div id="main" data-scroll-container>
-        <div id="navbar" data-scroll-section>
+        <div id="navbar" class="crsrhide" data-scroll-section>
             <div id="left">
                 <img id="imgProfile" src="assets/imgprofile3.png" alt="">
                 <img id="imgSign" src="assets/imagesign.png" alt="">
@@ -35,7 +37,7 @@
         
         <div id="home" class="page1" data-scroll-section>
             <div id="left">
-                <div id="intro" >
+                <div id="intro" class="crsrhide">
                     <h2 class="introh2"> <section class="p1text">Hello It's Me</section></h2>
                     <h1 id="introh1"><section class="p1text">Hans Kumar</section></h1>
                     <h2 class="introh2"><section class="p1text">And I Am A Software Developer</section></h2>
@@ -45,7 +47,7 @@
                         building user-friendly websites......
                      </p>
                 </div>
-                <div id="connect">
+                <div id="connect" class="crsrhide">
                     <a href="#"><img src="assets/githublogo.png" alt=""></a>
                     <a href="#"><img src="assets/linkedinlogo.png" alt=""></a>
                     <a href="#"><img src="assets/gfglogo.png" alt=""></a>    
@@ -64,6 +66,7 @@
             <div id="hleft">
                 <div id="imgcontainer">
                     <img src="assets/imgaward.png" alt="">
+            
                 </div>
                
             </div>
@@ -81,7 +84,7 @@
             <div id="scontainer" >
                 <div id="sleft">
                     <h2 id="sth2">Technical</h2>
-                  <div id="technical" >
+                  <div id="technical" class="crsrhide">
                     <ol >
                         <li>
                             <img class="tlogo" src="assets/imghtml.png" alt="">
@@ -164,7 +167,7 @@
                 </div>
                 <div id="sright" >
                     <h2>Professional</h2>
-                    <div id="professional" >
+                    <div id="professional" class="crsrhide" >
                         <div class="progressbars" >
                             <h5>creativity</h5>
                             <div id="creativitybar" class="bars bar1">
@@ -199,7 +202,7 @@
         <div id="services" class="page4" data-scroll-section>
             <h1 id="h1services">My Services</h1>
             <div id="boxes">
-                    <div id="ui" class="serv">
+                    <div id="ui" class="serv crsrhide">
                         <div class="imagediv"></div>
                         <ul id="ului">
 
@@ -211,7 +214,7 @@
                             <li  class="learnmore"><a href="#" > Learn More</a></li>
                         </ul>
                   </div>
-                   <div id="app" class="serv">
+                   <div id="app" class="serv crsrhide">
                     <div class="imagediv"></div>
                     <ul>
                         <li><i class="ri-android-line"></i></i></li>
@@ -222,7 +225,7 @@
                         <li  class="learnmore"><a href="#" > Learn More</a></li>
                     </ul>
                    </div>
-                   <div id="web" class="serv">
+                   <div id="web" class="serv crsrhide">
                     <div class="imagediv"></div>
                     <ul>
                         <li><i class="ri-crop-line"></i></li>
@@ -292,10 +295,15 @@
         </div>
     </div>
 
+
+
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  
     <script src="locomotive.js"></script>
+
+
+
     <script src="script.js"></script>
     <script src="gsap.js"></script>
   

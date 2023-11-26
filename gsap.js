@@ -363,3 +363,36 @@ page4PointerImg("#ui","assets/uiuximg.jpg")
 page4PointerImg("#app","assets/appimg.jpg")
 page4PointerImg("#web","assets/webimg.jpg")
 page1IntroImgEffect()
+
+
+function dynamicCrsr(){
+   let crsr = document.querySelector(".cursor");
+   let main = document.querySelector("#main");
+   let crsrHide = document.querySelectorAll(".crsrhide")
+   main.addEventListener("mousemove",function(dets){
+
+   gsap.to(crsr,{
+      x:dets.clientX,
+      y:dets.clientY,
+      
+   })
+   main.addEventListener("mouseenter",function(){
+      crsr.style.display = "block";
+   })
+   main.addEventListener("mouseleave",function(){
+      crsr.style.display = "none";
+   })
+
+   crsrHide.forEach(function(elem){
+      elem.addEventListener("mouseenter",function(){
+         crsr.style.display = "none";
+      })
+      elem.addEventListener("mouseleave",function(){
+         crsr.style.display = "block";
+      })
+   })
+
+   
+   })
+}
+dynamicCrsr();

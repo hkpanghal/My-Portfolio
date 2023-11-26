@@ -1,3 +1,4 @@
+
 let itemHanburgerIcon = document.getElementById("iconhamburger")
 let navbarLeftPart = document.getElementById("left")
 let navbarRightPart = document.getElementById("right")
@@ -43,6 +44,9 @@ itemHanburgerIcon.addEventListener("click",function(){
 //     })
    
 // }
+
+
+
 
 
 

@@ -14,8 +14,19 @@
     /* overflow: hidden; */
 
  }
-
+.cursor{
+    height: 30px;
+    width: 30px;
+    background-color:#dadada;
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+    mix-blend-mode: difference;
+    display: none;
+}
 #main{
+    mix-blend-mode: difference;
     width: 100%;
     background-image: url("assets/imgb4.svg");
     background-size: cover;
@@ -195,6 +206,7 @@
     margin-top: 2vw;
     display: flex;
     gap: 2vw;
+    width: fit-content;
 }
 
 .page1 #left #connect a{
@@ -286,7 +298,7 @@
     border-left: 1px solid #0cc6e7;
     box-shadow: 8px 8px 30px #0cc6e7; */
     overflow: hidden;
-    
+    /* background-color: #0cc6e7; */
 }
 .page2 #hleft #imgcontainer img{ 
  
@@ -742,6 +754,9 @@
 /* ********************************* for mobile users ********************************************** */
 @media (max-width:600px){
 
+    .cursor{
+        display: none;
+    }
     #navbar{
         height: 60px;
     }
