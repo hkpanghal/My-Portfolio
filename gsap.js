@@ -396,3 +396,59 @@ function dynamicCrsr(){
    })
 }
 dynamicCrsr();
+
+
+function page2ImgChangingEffect()
+{
+   const throttleFunction=(func, delay)=>{
+      let prev = 0; 
+      return (...args) => {
+        let now = new Date().getTime(); 
+        if(now - prev> delay){ 
+          prev = now;
+          return func(...args);  
+        }
+      }
+    }
+   let imgContainer = document.querySelector("#imgcontainer")
+   let imgComeUP = document.querySelectorAll(".imgcomeup")
+   const queue = [];
+   imgComeUP.forEach(function(elem,pos){
+      queue.push(elem);
+      
+   })
+   console.log(queue)
+   
+   imgComeUP.forEach(function(imgelems){
+   
+      imgelems.addEventListener("click",throttleFunction(function(){
+   
+         let shiftelem = queue[0];
+      
+         queue.shift();
+         queue.push(shiftelem);
+         // shiftelem.style.zIndex = 0;
+         gsap.to(shiftelem,{
+            zIndex:0,
+            duration:0.5,
+            scale:0,
+            opacity:0,
+            // display:"none"
+         })
+         let comeUp = queue[0];
+         //  comeUp.style.zIndex = 1
+          gsap.to(comeUp,{
+            zIndex:1,
+            duration:1,
+            delay:0.5,
+            scale:1,
+            opacity:1,
+            display:"block"
+         })
+         console.log("chala")
+        
+      },2000))
+   })
+}
+
+page2ImgChangingEffect();
