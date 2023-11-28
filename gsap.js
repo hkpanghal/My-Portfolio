@@ -17,6 +17,36 @@ function preogressBar(progressStartValue1,progressEndValue1,bar,value){
 }
 
 let t = gsap.timeline();
+
+t.from(".h1span",{
+   x:200,
+   duration:2,
+   stagger:0.15,
+   ease:Power3.easeInOut,
+   delay:0.5,
+})
+t.to("#header h1,.uh4",{
+   y:-100,
+   ease:Power3.easeInOut,
+   duration:1
+})
+t.to("#loader #part1,#loader #part2",{
+   height:0,
+   stagger:0.25,
+})
+t.from(".lp3h",{
+   y:200,
+   delay:-0.5,
+   duration:1,
+   rotate:10
+})
+t.to("#loader",{
+   display:"none",
+   duration:0.5,
+   y:-500,
+   opacity:0,
+   delay:0.6,
+})
 t.from("#navbar #left",{
     y:-200,
    opacity:0,
@@ -303,20 +333,24 @@ function page1IntroImgEffect()
       // nayaDiv.style.transform = `translate(${xval}%,${yval}%)`;
        nayaDiv.style.left = xval + "%";
        nayaDiv.style.top = yval + "%";
+
+   
        
-       gsap.to(".popUpDiv",{
-         y:-70,
+       gsap.to(nayaDiv,{
+         y:-200,
          ease:Power1,
-         duration:0.5,
-         rotate:Math.floor(Math.random())+rx,
+         duration:1,
+         rotate:180,
+        
+         
        })
        
-       gsap.to(".popUpDiv",{
-         y:70,
-         ease:Power1,
-         duration:0.3,
-         delay:0.25,
-         rotate:Math.floor(Math.random())+rx,
+       gsap.to(nayaDiv,{
+         y:200,
+         ease:Power2,
+         duration:1,
+         delay:1,
+         rotateX:180,
        })
       
        setTimeout(function(){

@@ -1,3 +1,12 @@
+
+@font-face {
+    font-family: Mazius;
+    src: url(assets/Mazius.otf);
+}
+@font-face {
+    font-family: GilroyMedium;
+    src: url(assets/GilroyMedium.ttf);
+}
 * {
   margin: 0;
   padding: 0;
@@ -9,9 +18,93 @@
     font-family: 'Trispace', sans-serif;
     height: 100%;
     width: 100%;
-    background: #000;
     /* overflow: hidden; */
 
+ }
+
+ #loader{
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    color: #dadada;
+ 
+ }
+ #loader #part1{
+    height: 100vh;
+    position: relative;
+    background-color:#222;
+ }
+ #loader #part2{
+    height: 100vh;
+    background-color: lightseagreen;
+ }
+ #loader #part3{
+    height: 100vh;
+    background-color: #f0f0f0;
+    position: relative;
+ }
+ #loader #upper{
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+
+ }
+ #loader #upper .uh4{
+    font-weight: 200;
+ }
+ #loader #upper .uh42{
+    text-align: center;
+ }
+ #loader #header{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+ }
+ #loader h1{
+    font-size: 5vw;
+    font-weight: 200;
+    
+ }
+ #loader h1 .h1span{
+    display: inline-block;
+    margin: 0.5vw;
+ }
+ #loader h1 .h1span2{
+   font-family: Mazius;
+   color: lightseagreen;
+ }
+ #loader #part3 #container{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 5vw;
+ }
+ #loader #part3 #container #cupper{
+    overflow: hidden;
+ }
+ #loader #part3 #container #clower{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+
+ }
+ #loader #part3 #container #clower h3{
+    font-size: 9vw;
+    font-family: Mazius;
+    color: lightseagreen;
+ }
+ #loader #part3 #container h2{
+    width: fit-content;
+    font-family: GilroyMedium;
+    margin: 0.5vw;
+    font-size: 11vw;
+    font-weight: 100;
+    color: #222;
  }
 .cursor{
     height: 30px;
@@ -25,7 +118,6 @@
     display: none;
 }
 #main{
-    mix-blend-mode: difference;
     width: 100%;
     background-image: url("assets/imgb4.svg");
     background-size: cover;
@@ -46,7 +138,7 @@
     background-size: cover;
     background-position: center;
     object-fit: cover;
-    z-index: 100000;
+    z-index: 1;
 
 }
 
@@ -1102,7 +1194,7 @@
 .imagediv{
     width: 30%;
     height:35%;
-    background-color: #37f802;
+    pointer-events: none;
     position: absolute;
     display: none;
     /* transition: all ease 0.3s; */
@@ -1112,6 +1204,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    pointer-events: none;
 }
 
 .popUpDiv{
@@ -1119,6 +1212,8 @@
     height:35%;
     position: absolute;
     overflow: hidden;
+    pointer-events: none;
+
     /* transition: all ease 0.3s; */
 }
 .popUpDiv .popUpImg{
@@ -1126,4 +1221,5 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+    pointer-events: none;
 }
