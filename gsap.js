@@ -16,6 +16,59 @@ function preogressBar(progressStartValue1,progressEndValue1,bar,value){
    }, speed);
 }
 
+function animateSVG(){
+   
+   document.querySelectorAll("#Visual .movedot").forEach(function(e){
+      var character = e
+      // console.log(e.getTotalLength());
+      e.style.strokeDasharray = 1000+"px";
+      e.style.strokeDashoffset = 1000+"px";
+   })
+
+   gsap.to("#Visual .movedot",{
+      strokeDashoffset:0,
+      duration:3,
+      ease:Expo.easeInOut,
+      delay:4
+   })
+}
+
+function animateHomepage(){
+   t.from("#navbar #left",{
+      y:-200,
+      opacity:0,
+      duration:2,
+  })
+  
+  gsap.from(".page1 #right #picture",{
+     opacity:0,
+     scale:0.5,
+     delay:6,
+     duration:1,
+  
+   })
+  
+  gsap.from(".page1 #left #intro .p1text",{
+     duration:1,
+     y:100,
+     stagger:0.25,
+     delay:6,
+  })
+   
+  gsap.from(".page1 a",{
+     opacity:0,
+     stagger:0.25,
+     delay:7,
+     x:50
+  })
+  
+  gsap.from("#navbar a",{
+      opacity:0,
+      stagger:0.2,
+      delay:6,
+      y:100
+   })
+}
 let t = gsap.timeline();
 
 t.from(".h1span",{
@@ -38,49 +91,22 @@ t.from(".lp3h",{
    y:200,
    delay:-0.5,
    duration:1,
-   rotate:10
+   stagger:0.15,
+   rotate:10,
+   onComplete:animateSVG()
 })
+
+
 t.to("#loader",{
    display:"none",
    duration:0.5,
    y:-500,
    opacity:0,
    delay:0.6,
-})
-t.from("#navbar #left",{
-    y:-200,
-   opacity:0,
-   duration:2,
-})
-
-gsap.from(".page1 #right #picture",{
-   opacity:0,
-   scale:0.5,
-   delay:1,
-   duration:1,
-
- })
-
-gsap.from(".page1 #left #intro .p1text",{
-   duration:1,
-   y:100,
-   stagger:0.25,
    
 })
- 
-gsap.from(".page1 a",{
-   opacity:0,
-   stagger:0.25,
-   delay:1,
-   x:50
-})
+animateHomepage()
 
-gsap.from("#navbar a",{
-    opacity:0,
-    stagger:0.2,
-    delay:1,
-    y:100
- })
 
  gsap.from(".page2 #hright #content p",{
    x:900,
