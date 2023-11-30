@@ -512,3 +512,56 @@ function page2ImgChangingEffect()
 }
 
 page2ImgChangingEffect();
+
+
+function p5ImageChnagingEffect()
+{
+   const throttleFunction=(func, delay)=>{
+      let prev = 0; 
+      return (...args) => {
+        let now = new Date().getTime(); 
+        if(now - prev> delay){ 
+          prev = now;
+          return func(...args);  
+        }
+      }
+    }
+   let count = 0;
+   let p5Container = document.querySelectorAll(".p5Container");
+   p5Container.forEach(function(e){
+      let crsr = document.querySelector(".cursor");
+      e.addEventListener("mousemove",throttleFunction(function(){
+         crsr.style.height = "20vw"
+         crsr.style.width = "20vw"
+         crsr.style.borderRadius = "0%"
+         crsr.style.zIndex = 200
+         crsr.style.mixBlendMode = "normal"
+         crsr.style.backgroundColor = "transparent"
+         
+         let dynamicImg = e.children[0].children
+   
+          count++;
+          if(count>=4)
+          {
+               count=0;
+          }
+            console.log(dynamicImg[count])
+            
+         crsr.style.backgroundImage = `url(${dynamicImg[count].getAttribute("src")})`
+            //  crsr.style.backgroundImage = ""
+      },1000))
+      e.addEventListener("mouseleave",function(){
+         crsr.style.height = "30px"
+         crsr.style.width = "30px"
+         crsr.style.borderRadius = "50%"
+         crsr.style.zIndex = 100
+         crsr.style.backgroundImage = "none"
+         crsr.style.backgroundColor= "#dadada"
+   
+      })
+   })
+}
+
+p5ImageChnagingEffect()
+
+

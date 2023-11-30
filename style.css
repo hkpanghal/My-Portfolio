@@ -123,6 +123,13 @@
     pointer-events: none;
     mix-blend-mode: difference;
     display: none;
+    object-fit: cover;
+    object-position: center;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.crsrimg{
+    display: none;
 }
 #main{
     width: 100%;
